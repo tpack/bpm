@@ -1,8 +1,21 @@
 bpm
 ===
 
-bpm (Boot Project Manager)是一个轻量但完整的组件化的前端构架解决方案，包含前端需要的测试、发布、压缩工具。它主要提供了: 
+bpm (BootJs Package Manager) is a build tool for front-end projects built by Node.Js.
 
-- 一个 NodeJs 开发的前端专用开发服务器。
-- 一套发布工具，包含文件重定向、代码合并压缩等。
-- 其它常用的前端测试工具，如 AJAX 模拟，动态图等。
+## What to build for?
+
+1. Compress css/js files.
+2. Rewrite the url of assets. e.g. Rewrite to cdn path:
+
+before build:
+	
+	<script src="../assets/page.js"></script>
+	
+after build:
+
+	<script src="http://cdn.domain.com/assets/page.js"></script>
+	
+3. Remove the include() to improve performance.
+
+4. Any other requirements such as custom code compiling.

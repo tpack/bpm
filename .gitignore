@@ -1,0 +1,16 @@
+*~
+~*
+_notes
+Thumbs.db
+.settings
+.DS_Store
+.svn
+*.diff
+*.patch
+*.suo
+*.bat
+/node.exe
+/npm.cmd
+/supervisor
+/supervisor.cmd
+/node_modules
