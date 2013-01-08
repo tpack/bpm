@@ -1,4 +1,4 @@
-var Builder = require('../lib/builder');
+var Builder = require('../../lib/builder');
 
 
 var builder = new Builder();

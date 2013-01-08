@@ -1,16 +1,22 @@
-var Builder = require('../../lib/compilers/js');
+var Builder = require('../../lib/builder');
+var Compiler = require('../../lib/compilers/js');
 
+
+var sourceCode = __dirname + "/data/test.js";
+
+var compileOptions = {
+
+	configJs: function(context) {
+		context.include.basePath = __dirname.replace(/\\/g, "/") + "/data/";
+	}
+
+};
 
 var builder = new Builder();
 
-var sep = require("path").sep;
-var testRootPath = __dirname + sep + "data" + sep;
 
-console.log(testRootPath);
 
-// Tell the builder the base oath to use.
-builder.fromBasePath = testRootPath + "src";
-builder.toBasePath = testRootPath + "build";
-builder.build();
 
-// builder.build(__dirname + sep + "src", __dirname + sep+ "build");
+var compiledCode = Compiler.JsBuilder.build(sourceCode, compileOptions, builder);
+
+console.log(compiledCode);
