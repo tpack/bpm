@@ -17,6 +17,6 @@ var builder = new Builder();
 
 
 
-var compiledCode = Compiler.JsBuilder.build(sourceCode, compileOptions, builder);
+var compiledCode = Compiler.BootCompiler.build(sourceCode, compileOptions, builder);
 
 console.log(compiledCode);
