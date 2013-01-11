@@ -1,5 +1,7 @@
+modules/
+*.iml
+.*
 *~
-~*
 _notes
 Thumbs.db
 .settings
